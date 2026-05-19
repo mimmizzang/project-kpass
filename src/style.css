@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-lg: 1025px;
+}
+
 .swiper-slide {
   width: auto !important;
 }

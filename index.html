@@ -14,14 +14,14 @@
     <header
       class="fixed top-0 right-0 left-0 z-40 w-full bg-white lg:relative lg:top-auto lg:right-auto lg:left-auto lg:z-auto lg:border-b lg:border-slate-100"
     >
-      <div class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:py-5">
+      <div class="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 md:px-8 md:py-4 lg:px-6 lg:py-5">
         <h1 class="flex items-center">
           <a href="/" class="text-xl lg:text-4xl">
             <i class="fa-solid fa-subway"></i>
           </a>
         </h1>
 
-        <nav class="hidden items-center space-x-14 text-lg font-semibold lg:flex">
+        <nav class="hidden items-center space-x-14 text-base font-semibold lg:flex">
           <a href="#">사업소개</a>
           <a href="#">이용안내</a>
           <a href="#">K-패스 카드</a>
@@ -29,11 +29,9 @@
           <a href="#">문의하기</a>
         </nav>
 
-        <div class="hidden items-center space-x-3 text-xs lg:flex">
-          <a href="#">로그인</a>
-          <span class="text-slate-300">|</span>
-          <a href="#">회원가입</a>
-          <span class="text-slate-300">|</span>
+        <div class="hidden items-center divide-x divide-slate-300 text-xs font-medium lg:flex">
+          <a href="#" class="px-3">로그인</a>
+          <a href="#" class="px-3">회원가입</a>
         </div>
 
         <button id="menu-open-btn" class="text-xl lg:hidden">
@@ -45,7 +43,7 @@
     <!-- 모바일 메뉴 -->
     <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-white">
       <div class="flex h-full w-full flex-col">
-        <div class="space-y-6 p-5 pb-16">
+        <div class="space-y-6 p-5 pb-16 md:px-8 lg:px-10">
           <div class="flex items-center justify-between text-xl">
             <button id="menu-home-btn"><i class="fa-solid fa-house"></i></button>
             <button id="menu-close-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -54,39 +52,51 @@
           <div class="text-sm font-bold tracking-tight">로그인 또는 회원가입을 해주세요!</div>
 
           <div class="flex gap-2">
-            <button class="h-10 w-28 rounded-full bg-[#ff5500] text-sm font-bold text-white">로그인</button>
-            <button class="h-10 w-28 rounded-full border border-slate-400 bg-white text-sm font-bold text-slate-700">
-              회원가입
-            </button>
+            <button class="h-10 w-28 rounded-full bg-[#ff5500] text-sm font-semibold text-white">로그인</button>
+            <button class="h-10 w-28 rounded-full border bg-white text-sm font-semibold">회원가입</button>
           </div>
         </div>
 
-        <div class="flex-1 overflow-y-auto border-t border-slate-300 bg-slate-100 px-5 py-1">
-          <nav class="flex flex-col space-y-2">
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-compass w-5 text-base text-slate-700"></i>
-              <span>사업소개</span>
-            </a>
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-file-invoice w-5 text-base text-slate-700"></i>
-              <span>이용안내</span>
-            </a>
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-credit-card w-5 text-base text-slate-700"></i>
-              <span>K-패스 카드</span>
-            </a>
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-bell w-5 text-base text-slate-700"></i>
-              <span>공지사항</span>
-            </a>
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-pen-to-square w-5 text-base text-slate-700"></i>
-              <span>문의하기</span>
-            </a>
-            <a href="#" class="flex items-center gap-4 py-5 text-sm font-medium">
-              <i class="fa-solid fa-face-smile w-5 text-base text-slate-700"></i>
-              <span>이용약관</span>
-            </a>
+        <div class="flex flex-1 flex-col overflow-y-auto border-t border-slate-200 bg-slate-50">
+          <nav class="min-h-full w-full">
+            <ul class="flex min-h-full w-full flex-col">
+              <li class="flex w-full">
+                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
+                  <i class="fa-solid fa-compass w-5 text-base"></i>
+                  <span>사업소개</span>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#" class="font-mesdium flex items-center gap-4 px-6 py-5 text-sm">
+                  <i class="fa-solid fa-file-invoice w-5 text-base"></i>
+                  <span>이용안내</span>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
+                  <i class="fa-solid fa-credit-card w-5 text-base"></i>
+                  <span>K-패스 카드</span>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
+                  <i class="fa-solid fa-bell w-5 text-base"></i>
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
+                  <i class="fa-solid fa-pen-to-square w-5 text-base"></i>
+                  <span>문의하기</span>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
+                  <i class="fa-solid fa-face-smile w-5 text-base"></i>
+                  <span>이용약관</span>
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
