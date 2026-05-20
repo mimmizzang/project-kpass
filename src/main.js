@@ -2,10 +2,12 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 const getSwiperOptions = (num) => ({
-  slidesPerView: "auto",
-  spaceBetween: 30,
+  slidesPerView: 2,
+  spaceBetween: 0,
   centeredSlides: true,
   loop: true,
+  loopAdditionalSlides: 1,
+
   navigation: {
     nextEl: `.swiper-btn-next-${num}`,
     prevEl: `.swiper-btn-prev-${num}`,
@@ -13,9 +15,7 @@ const getSwiperOptions = (num) => ({
   breakpoints: {
     1024: {
       slidesPerView: 3,
-      spaceBetween: 40,
-      centeredSlides: false,
-      loopAdditionalSlides: 3,
+      spaceBetween: 0,
     },
   },
 });
