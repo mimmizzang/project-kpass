@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-.swiper-slide {
-  width: auto !important;
-}
-
-@media (min-width: 1024px) {
-  .swiper-slide {
-    width: initial !important;
-  }
+@theme {
+  --breakpoint-md: 769px;
+  --breakpoint-lg: 1025px;
 }
