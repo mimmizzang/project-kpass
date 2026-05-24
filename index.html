@@ -12,29 +12,95 @@
   <body class="bg-white text-slate-900">
     <!-- 헤더 -->
     <header
-      class="fixed top-0 right-0 left-0 z-40 w-full bg-white lg:relative lg:top-auto lg:right-auto lg:left-auto lg:z-auto lg:border-b lg:border-slate-200"
+      id="header"
+      class="fixed top-0 left-0 z-40 max-h-[56px] w-full overflow-hidden bg-white lg:absolute lg:max-h-[80px] lg:border-b lg:border-slate-200"
     >
-      <div class="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 md:px-8 md:py-4 lg:px-6 lg:py-5">
-        <h1 class="flex items-center">
+      <div class="absolute top-[80px] left-0 hidden h-[1px] w-full bg-slate-200 lg:block"></div>
+
+      <div class="relative mx-auto flex max-w-[1200px] items-start justify-between px-4 lg:px-6">
+        <h1 class="flex h-[56px] shrink-0 items-center lg:h-[80px]">
           <a href="/" class="text-xl lg:text-4xl">
             <i class="fa-solid fa-subway"></i>
           </a>
         </h1>
 
-        <nav class="hidden items-center space-x-14 text-base font-semibold lg:flex">
-          <a href="#">사업소개</a>
-          <a href="#">이용안내</a>
-          <a href="#">K-패스 카드</a>
-          <a href="/src/pages/notice/notice.html">공지사항</a>
-          <a href="#">문의하기</a>
+        <nav class="hidden flex-1 justify-center lg:flex">
+          <ul class="flex items-start text-[15px] font-bold">
+            <li class="flex w-[150px] flex-col">
+              <button class="pc-menu-btn flex h-[80px] w-full items-center px-5">사업소개</button>
+              <ul
+                class="flex h-[420px] w-full flex-col gap-y-10 border-r border-l border-slate-200 px-3 py-8 text-[13px]"
+              >
+                <li><a href="#" class="block">K-패스소개</a></li>
+                <li>
+                  <a href="#" class="block">지역별혜택소개</a>
+                  <ul class="mt-5 flex flex-col gap-y-4 pl-1 text-[12px] text-slate-500">
+                    <li><a href="#" class="block">K-패스-경기</a></li>
+                    <li><a href="#" class="block">K-패스-인천</a></li>
+                    <li><a href="#" class="block">K-패스-동백</a></li>
+                    <li><a href="#" class="block">K-패스-세종</a></li>
+                    <li><a href="#" class="block">K-패스-충남</a></li>
+                    <li><a href="#" class="block">K-패스-경남</a></li>
+                    <li><a href="#" class="block">K-패스-광주</a></li>
+                    <li><a href="#" class="block">K-패스-울산</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="flex w-[150px] flex-col">
+              <button class="pc-menu-btn flex h-[80px] w-full items-center px-5">이용안내</button>
+              <ul class="flex h-[420px] w-full flex-col gap-y-10 border-r border-slate-200 px-3 py-8 text-[13px]">
+                <li><a href="#" class="block">가입조건</a></li>
+                <li><a href="#" class="block">적립안내</a></li>
+                <li><a href="#" class="block">환급안내</a></li>
+              </ul>
+            </li>
+
+            <li class="flex w-[150px] flex-col">
+              <button class="pc-menu-btn flex h-[80px] w-full items-center px-5">K-패스 카드</button>
+              <ul class="flex h-[420px] w-full flex-col gap-y-10 border-r border-slate-200 px-3 py-8 text-[13px]">
+                <li><a href="#" class="block">카드 소개</a></li>
+                <li>
+                  <a href="#" class="block">사용안내</a>
+                  <ul class="mt-5 flex flex-col gap-y-4 pl-1 text-[12px] text-slate-500">
+                    <li><a href="#" class="block">카드사별 지급방식</a></li>
+                    <li><a href="#" class="block">모바일페이 이용안내</a></li>
+                    <li><a href="#" class="block">카드변경방법</a></li>
+                    <li><a href="#" class="block">카드사문의안내</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="block text-[13px] font-bold">카드 이벤트</a></li>
+              </ul>
+            </li>
+
+            <li class="flex w-[150px] flex-col">
+              <button class="pc-menu-btn flex h-[80px] w-full items-center px-5">공지사항</button>
+              <ul class="flex h-[420px] w-full flex-col gap-y-10 border-r border-slate-200 px-3 py-8 text-[13px]">
+                <li>
+                  <a href="/src/pages/notice/notice.html" class="block">공지사항</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="flex w-[150px] flex-col">
+              <button class="pc-menu-btn flex h-[80px] w-full items-center px-5">문의하기</button>
+              <ul class="flex h-[420px] w-full flex-col gap-y-10 border-r border-slate-200 px-3 py-8 text-[13px]">
+                <li><a href="#" class="block">문의하기</a></li>
+                <li><a href="#" class="block">1:1문의</a></li>
+                <li><a href="#" class="block">문의내역</a></li>
+                <li><a href="#" class="block">자주묻는질문</a></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
 
-        <div class="hidden items-center divide-x divide-slate-300 text-xs font-medium lg:flex">
+        <div class="hidden h-[80px] shrink-0 items-center divide-x divide-slate-300 text-xs font-medium lg:flex">
           <a href="#" class="px-3">로그인</a>
           <a href="#" class="px-3">회원가입</a>
         </div>
 
-        <button id="menu-open-btn" class="text-xl lg:hidden">
+        <button id="menu-open-btn" class="flex h-[56px] items-center text-xl lg:hidden">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -57,53 +123,125 @@
           </div>
         </div>
 
-        <div class="flex flex-1 flex-col overflow-y-auto border-t border-slate-200 bg-slate-50">
-          <nav class="min-h-full w-full">
-            <ul class="flex min-h-full w-full flex-col">
-              <li class="flex w-full">
-                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
-                  <i class="fa-solid fa-compass w-5 text-base"></i>
-                  <span>사업소개</span>
-                </a>
-              </li>
-              <li class="flex w-full">
-                <a href="#" class="font-mesdium flex items-center gap-4 px-6 py-5 text-sm">
-                  <i class="fa-solid fa-file-invoice w-5 text-base"></i>
-                  <span>이용안내</span>
-                </a>
-              </li>
-              <li class="flex w-full">
-                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
-                  <i class="fa-solid fa-credit-card w-5 text-base"></i>
-                  <span>K-패스 카드</span>
-                </a>
-              </li>
-              <li class="flex w-full">
-                <a href="/src/pages/notice/notice.html" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
-                  <i class="fa-solid fa-bell w-5 text-base"></i>
-                  <span>공지사항</span>
-                </a>
-              </li>
-              <li class="flex w-full">
-                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
-                  <i class="fa-solid fa-pen-to-square w-5 text-base"></i>
-                  <span>문의하기</span>
-                </a>
-              </li>
-              <li class="flex w-full">
-                <a href="#" class="flex items-center gap-4 px-6 py-5 text-sm font-medium">
-                  <i class="fa-solid fa-face-smile w-5 text-base"></i>
-                  <span>이용약관</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="relative flex w-full flex-1 overflow-hidden border-t border-slate-200 bg-white">
+          <ul class="h-full w-full shrink-0 overflow-y-auto bg-slate-100">
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-compass w-5 text-center text-lg"></i>
+                <span>사업소개</span>
+              </button>
+
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li>
+                  <a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">K-패스소개</a>
+                </li>
+                <li>
+                  <a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">지역별혜택소개</a>
+                  <ul class="my-5 flex flex-col gap-y-8 pl-2 text-[13px] text-slate-500">
+                    <li><a href="#" class="block">K패스-경기</a></li>
+                    <li><a href="#" class="block">K패스-인천</a></li>
+                    <li><a href="#" class="block">K패스-동백</a></li>
+                    <li><a href="#" class="block">K패스-세종</a></li>
+                    <li><a href="#" class="block">K패스-충남</a></li>
+                    <li><a href="#" class="block">K패스-경남</a></li>
+                    <li><a href="#" class="block">K패스-광주</a></li>
+                    <li><a href="#" class="block">K패스-울산</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-file-invoice w-5 text-center text-lg"></i>
+                <span>이용안내</span>
+              </button>
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li><a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">가입조건</a></li>
+                <li><a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">적립안내</a></li>
+                <li><a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">환급안내</a></li>
+              </ul>
+            </li>
+
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-credit-card w-5 text-center text-lg"></i>
+                <span>K-패스 카드</span>
+              </button>
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li><a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">카드 소개</a></li>
+                <li>
+                  <a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">사용안내</a>
+                  <ul class="my-5 flex flex-col gap-y-8 pl-2 text-[13px] text-slate-500">
+                    <li><a href="#" class="block">카드사별 지급방식</a></li>
+                    <li><a href="#" class="block">모바일페이 이용안내</a></li>
+                    <li><a href="#" class="block">카드변경방법</a></li>
+                    <li><a href="#" class="block">카드사문의안내</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="block border-b border-slate-200 pb-5 text-sm font-semibold">카드 이벤트</a></li>
+              </ul>
+            </li>
+
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-bell w-5 text-center text-lg"></i>
+                <span>공지사항</span>
+              </button>
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li>
+                  <a
+                    href="/src/pages/notice/notice.html"
+                    class="block border-b border-slate-200 pb-4 text-sm font-semibold"
+                    >공지사항</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-pen-to-square w-5 text-center text-lg"></i>
+                <span>문의하기</span>
+              </button>
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li><a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">문의하기</a></li>
+                <li><a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">1:1문의</a></li>
+                <li><a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">문의내역</a></li>
+                <li><a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">자주묻는질문</a></li>
+              </ul>
+            </li>
+
+            <li class="w-full">
+              <button class="mobile-tab-btn flex w-full items-center gap-2 px-4 py-6 text-sm font-medium">
+                <i class="fa-solid fa-face-smile w-5 text-center text-lg"></i>
+                <span>이용약관</span>
+              </button>
+              <ul
+                class="mobile-panel absolute top-0 right-0 bottom-0 hidden w-[55%] flex-col gap-y-5 overflow-y-auto bg-white px-4 py-5"
+              >
+                <li>
+                  <a href="#" class="block border-b border-slate-200 pb-4 text-sm font-semibold">이용약관</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
 
     <!-- 메인 -->
-    <main class="min-h-screen w-full pt-16 lg:pt-8">
+    <main class="min-h-screen w-full pt-16 lg:pt-28">
       <!-- 상단 -->
       <section class="w-full bg-white px-5 pb-6 lg:px-4">
         <div class="mx-auto flex max-w-[1200px] flex-col space-y-6">
