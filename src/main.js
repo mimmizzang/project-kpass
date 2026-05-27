@@ -1,6 +1,18 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
+/* 메인 상단 슬라이드 */
+const mainBannerSwiper = new Swiper(".main-banner-swiper", {
+  loop: true,
+  speed: 800,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
+
+/* 메인 하단 슬라이드 */
 const getSwiperOptions = (num) => ({
   slidesPerView: 2,
   spaceBetween: 0,
